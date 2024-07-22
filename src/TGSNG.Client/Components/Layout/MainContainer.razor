@@ -1,0 +1,12 @@
+﻿<div>
+    header <button @onclick="@((e) => Console.WriteLine(e.Button))">x</button>
+</div>
+
+<div class="main">
+@ChildContent
+</div>
+
+@code{
+    [Parameter]
+    public RenderFragment? ChildContent {get;set;}
+}

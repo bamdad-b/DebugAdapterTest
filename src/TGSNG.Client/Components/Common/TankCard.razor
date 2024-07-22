@@ -1,0 +1,13 @@
+﻿@using TGSNG.Domain.Entities
+
+<SAD.UI.Components.Cards.Card>
+<h3 style="background-colr: @(Tank?.BackgroundColor)">
+    @Tank?.Initials - @Tank?.Name
+</h3>
+</SAD.UI.Components.Cards.Card>
+
+
+@code {
+    [Parameter, EditorRequired]
+    public Tank? Tank { get; set; }
+}

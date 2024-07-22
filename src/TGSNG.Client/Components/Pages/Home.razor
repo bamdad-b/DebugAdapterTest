@@ -1,0 +1,16 @@
+﻿@page "/"
+@rendermode InteractiveWebAssembly
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<br />
+@(OperatingSystem.IsBrowser() ? "Wasm" : "Server")
+
+@if (!OperatingSystem.IsBrowser())
+{
+    <span>Loading...</span>
+}

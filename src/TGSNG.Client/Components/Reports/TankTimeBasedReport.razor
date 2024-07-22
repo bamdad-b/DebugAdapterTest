@@ -1,0 +1,16 @@
+﻿@using TGSNG.Domain.Entities
+@using TGSNG.Shared.Models
+
+<div >
+    @Tank?.Name
+    <br />
+    @CurrentValue?.Value
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public Tank? Tank { get; set; }
+
+    [Parameter]
+    public TankTimeBased? CurrentValue { get; set; }
+}
